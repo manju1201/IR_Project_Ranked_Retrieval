@@ -39,7 +39,7 @@ classification and ranked retrieval.
 * All the examples we have are converted into strings and undergo processing.
 * In the data we have emojis and emoticons that are also converted into words eg: 😀
 converted to ‘Happy’ .
-* Also converted mentions to tags eg: #BarackObama #Obama Obama converted into <tag1><tag2> .
+* Also converted mentions to tags eg: #BarackObama #Obama Obama converted into "<tag1><tag2>" .
 * Also removed Html tags, whitespaces, accented characters, contractions like don’t into
 do not, then converted all characters into lowercase(normalization).
 * Now, the words are tokenized and the stop words, special characters, punctuation marks
@@ -59,23 +59,23 @@ sentences.
 After the preprocessing the entire dataset is divided into train and validation sets. The
 method used to give weights to each word is Ngram Level TF-IDF. The TF-IDF vectors are given
 to the Multinomial naive bayes model for training.
-##### TF-IDF
+#### TF-IDF
 TF-IDF stands for “Term Frequency — Inverse Document Frequency” . This method is to
 quantify a word in documents, we generally compute a weight to each word which signifies the
 importance of the word in the document and corpus.
-###### Term Frequency
+##### Term Frequency
 This measures the frequency of a word in a document. This highly depends on the length of the
 document and the generality of the word. TF is individual to each document and word, hence we
 can formulate TF as follows.
 * tf(t,d) = count of t in d
-###### Document Frequency
+##### Document Frequency
 This measures the importance of a document in the whole set of corpus, this is very similar to
 TF. The only difference is that TF is frequency counter for a term t in document d, whereas DF
 is the count of occurrences of term t in the document set N. In other words, DF is the number
 of documents in which the word is present. We consider one occurrence if the term consists in
 the document at least once, we do not need to know the number of times the term is present.
 * df(t) = occurrence of t in documents
-###### Inverse Document Frequency
+##### Inverse Document Frequency
 * IDF is the inverse of the document frequency which measures the informativeness of term t.
 When we calculate IDF, it will be very low for the most occurring words such as stop words. This
 finally gives what we want, a relative weightage.
@@ -85,10 +85,10 @@ value explodes. So to dampen the effect we take log of the IDF.
   * idf(t) = log(N/df)
 *Finally, by taking a multiplicative value of TF and IDF, we get the TF-IDF score,
   * tf-idf(t, d) = tf(t, d) * log(N/df)
-###### N-gram Level TF-IDF:
+##### N-gram Level TF-IDF:
 N-grams are the combination of N terms together. This Matrix represents tf-idf scores of N-grams.
 Now these N-gram tf-idf vectors are given to the Multinomial naive bayes model for training.
-###### Evaluation
+##### Evaluation
 * Precision = Total no. of docs retrieved that are relevant / Total no. of docs that are retrieved
 * Recall = Total no. of docs retrieved that are relevant / Total no. of relevant docs in database
 
