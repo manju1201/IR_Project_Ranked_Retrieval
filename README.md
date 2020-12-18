@@ -12,4 +12,8 @@ Step 1: Clone the Repo
 #### Merged dataset 1,2,3
 * Dataset used for search and training -- [IR_domain_custom_dataset](https://drive.google.com/file/d/1A84bJNMIDKvyMi6ws5xct9wCXOxs3F2M/view?usp=sharing)
 
+#### Classification
 
+
+
+#### Ranked Retrieval(Search)
