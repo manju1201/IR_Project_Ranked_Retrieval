@@ -13,18 +13,18 @@ Step 1: Clone the Repo
 * Dataset used for search and training -- [IR_domain_custom_dataset](https://drive.google.com/file/d/1A84bJNMIDKvyMi6ws5xct9wCXOxs3F2M/view?usp=sharing)
 
 The basic procedure followed here is
-● Collecting the data set.
-● Preprocessing
-● Classify based on domain.
-● Indexing.
-● Search for a query.
+* Collecting the data set.
+* Preprocessing
+* Classify based on domain.
+* Indexing.
+* Search for a query.
 
 #### 1.Collecting the Dataset
-I have taken Twitter as my domain so I considered three different categories of data. The
+* I have taken Twitter as my domain so I considered three different categories of data. The
 three categories are Fifa world cup, US elections, Food reviews.
-Fifa world cup(943169 examples):
-Required field : tweet_text
-Added a new column, domain = 1
+* Fifa world cup(943169 examples):
+  * Required field : tweet_text
+  * Added a new column, domain = 1
 Food Reviews(568454):
 Required field : Text
 Added a new column, domain = 2
