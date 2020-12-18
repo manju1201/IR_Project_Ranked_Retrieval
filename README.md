@@ -39,7 +39,7 @@ classification and ranked retrieval.
 * All the examples we have are converted into strings and undergo processing.
 * In the data we have emojis and emoticons that are also converted into words eg: 😀
 converted to ‘Happy’ .
-* Also converted mentions to tags eg: #BarackObama #Obama Obama converted into "<tag1><tag2>" .
+* Also converted mentions to tags eg: #BarackObama #Obama Obama converted into "tag1,tag2" .
 * Also removed Html tags, whitespaces, accented characters, contractions like don’t into
 do not, then converted all characters into lowercase(normalization).
 * Now, the words are tokenized and the stop words, special characters, punctuation marks
@@ -83,7 +83,7 @@ finally gives what we want, a relative weightage.
 * Now there are few other problems with the IDF, in case of a large corpus, say 10,000, the IDF
 value explodes. So to dampen the effect we take log of the IDF. 
   * idf(t) = log(N/df)
-*Finally, by taking a multiplicative value of TF and IDF, we get the TF-IDF score,
+* Finally, by taking a multiplicative value of TF and IDF, we get the TF-IDF score,
   * tf-idf(t, d) = tf(t, d) * log(N/df)
 ##### N-gram Level TF-IDF:
 N-grams are the combination of N terms together. This Matrix represents tf-idf scores of N-grams.
